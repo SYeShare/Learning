@@ -3,19 +3,28 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <map>
 
 using namespace std;
 
-const double* f1(const double ar[], int n);
-const double * f2(const double[], int);
-const double *f3(const double*, int);
-
-
-
 int main()
 {
-#if 1 
-	//2018年11月8日
+	//2018年11月10日
+#if 1
+	double a, b;
+	double c = 13.0;
+
+	a = square(5.0);
+	b = square(4.5 + 7.5); 
+
+	
+
+
+#endif
+
+
+#if 0 //2018年11月8日
+	
 
 	double av[3] = { 1112.3, 1542.6, 2227.9 };
 
@@ -53,6 +62,14 @@ int main()
 
 	cout << (*(*pd)[2])(av, 3) << ":" << *(*(*pd)[2])(av, 3) << endl;
 
+	//typedef to down mistake/nums
+	typedef const double *(*p_fun)(const double *, int);
+	p_fun p1 = f1;
+
+	p_fun pa[3] = { f1,f2,f3 };
+	p_fun(*pd)[3] = &pa;
+
+
 #endif
 #if 0
 	//2018年11月7日
@@ -65,6 +82,15 @@ int main()
     return 0;
 }
 
+// map<int, string>hT;
+// char*plot(map* hT);
+void ignor(int);
+void a1(int arr[], int len, int vlue);
+void a2(int *p1, int *p2, int value);
+int fn(int n)
+{
+	return n * fn(n - 1);
+}
 const double *f1(const double *ar, int n)
 {
 	return ar;
