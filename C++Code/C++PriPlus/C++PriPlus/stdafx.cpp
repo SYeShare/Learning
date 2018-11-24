@@ -4,5 +4,22 @@
 
 #include "stdafx.h"
 
+template <typename AnyType>
+void Swap(AnyType &a, AnyType &b)
+{
+	AnyType temp;
+	temp = a;
+	a = b;
+	b = temp;
+}
+
+template <class T>
+void Swap(T &a, T &b)
+{
+	T temp;
+	temp = a;
+	a = b;
+	b = a;
+}
 // TODO: 在 STDAFX.H 中引用任何所需的附加头文件，
 //而不是在此文件中引用

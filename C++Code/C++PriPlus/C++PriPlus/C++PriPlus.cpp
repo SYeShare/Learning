@@ -9,16 +9,22 @@ using namespace std;
 
 int main()
 {
-	//2018年11月10日
+	//2018年11月13日
 #if 1
+
+
+#endif
+
+
+
+
+	//2018年11月10日
+#if 0
 	double a, b;
 	double c = 13.0;
 
 	a = square(5.0);
 	b = square(4.5 + 7.5); 
-
-	
-
 
 #endif
 
