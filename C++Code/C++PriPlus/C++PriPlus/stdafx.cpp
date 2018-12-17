@@ -4,6 +4,15 @@
 
 #include "stdafx.h"
 
+struct A 
+{
+	int i;
+	int *p;
+public:
+	A() :p(0) { cout << "A:A()" << endl; }
+};
+
+
 template <typename AnyType>
 void Swap(AnyType &a, AnyType &b)
 {
