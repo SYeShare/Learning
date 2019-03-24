@@ -1,7 +1,7 @@
 #pragma once
 #include "pch.h"
 
-//base基础类
+//base基础DATA
 struct AStruct
 {
 	AStruct();
@@ -112,4 +112,77 @@ CconStruct::~CconStruct()
 
 
 //Inherit
+struct SInherStruct:AStruct
+{
+	SInherStruct();
+	~SInherStruct();
+};
+SInherStruct::SInherStruct()
+{
+	cout << "SInherStruct()" << endl;
+}
+SInherStruct::~SInherStruct()
+{
+	cout << "~SInherStruct" << endl;
+}
 
+struct SInherClass : Aclass
+{
+	SInherClass();
+	~SInherClass();
+};
+SInherClass::SInherClass()
+{
+	cout << "SInherClass()" << endl;
+}
+SInherClass::~SInherClass()
+{
+	cout << "~SInherClass()" << endl;
+}
+
+class CInherStruct : AStruct
+{
+	CInherStruct();
+	~CInherStruct();
+};
+CInherStruct::CInherStruct()
+{
+	cout << "CInherStruct()" << endl;
+}
+CInherStruct::~CInherStruct()
+{
+	cout << "~CInherStruct()" << endl;
+}
+
+class CInherClass : Aclass
+{
+public:
+//自动补全的构造函数， 属于继承fix 测试确认
+	CInherClass : Aclass();
+	~CInherClass : Aclass();
+
+	CInherClass();
+	~CInherClass();
+
+private:
+
+};
+
+CInherClass::CInherClass()
+{
+	cout << "CInherClass()" << endl;
+}
+CInherClass::~CInherClass()
+{
+	cout << "~CInherClass()" << endl;
+}
+
+CInherClass : Aclass::CInherClass : Aclass()
+{
+	cout << "CInherClass : Aclass()" << endl;
+}
+
+CInherClass : Aclass::~CInherClass : Aclass()
+{
+	cout << "~CInherClass : Aclass()" << endl;
+}

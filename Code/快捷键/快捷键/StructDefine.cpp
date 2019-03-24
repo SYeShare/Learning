@@ -6,7 +6,21 @@ void StructDefine()
 {
 	//Single
 	AStruct tAs;
-/*	BStruct tBs;*/
+	Aclass cAc;
+
+	//contain
+	SConStruct sConS;
+	SConClass  sConC;
+
+	CconStruct cConS;
+	CConClass  cConC;
+
+	//inherit
+	SInherStruct sInherS;
+	SInherClass  sinherC;
+
+	CInherStruct cInherS;
+	CInherClass  cInherC;
 
 
 	return;

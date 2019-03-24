@@ -10,3 +10,6 @@ Code/快捷键/快捷键/Debug/
 Code/快捷键/.vs/
 Code/快捷键/快捷键/快捷键.vcxproj.filters
 Code/快捷键/快捷键/快捷键.vcxproj
+C++Code/压缩编码demo/ipch/
+*.db
+Code/快捷键/快捷键.sln
