@@ -142,6 +142,7 @@ SInherClass::~SInherClass()
 
 class CInherStruct : AStruct
 {
+public:
 	CInherStruct();
 	~CInherStruct();
 };
@@ -158,8 +159,8 @@ class CInherClass : Aclass
 {
 public:
 //自动补全的构造函数， 属于继承fix 测试确认
-	CInherClass : Aclass();
-	~CInherClass : Aclass();
+// 	CInherClass : Aclass();
+// 	~CInherClass : Aclass();
 
 	CInherClass();
 	~CInherClass();
@@ -177,12 +178,30 @@ CInherClass::~CInherClass()
 	cout << "~CInherClass()" << endl;
 }
 
-CInherClass : Aclass::CInherClass : Aclass()
-{
-	cout << "CInherClass : Aclass()" << endl;
-}
+// CInherClass : Aclass::CInherClass : Aclass()
+// {
+// 	cout << "CInherClass : Aclass()" << endl;
+// }
+// 
+// CInherClass : Aclass::~CInherClass : Aclass()
+// {
+// 	cout << "~CInherClass : Aclass()" << endl;
+// }
 
-CInherClass : Aclass::~CInherClass : Aclass()
-{
-	cout << "~CInherClass : Aclass()" << endl;
-}
+
+//初始化列表-之三：子类初始化父类的私有成员
+class Test {
+public:
+	Test() { cout << "Test void" << endl; }
+	Test(int x) { cout << "Test Int" << endl; int_x = x; }
+	void show() { cout << int_x << endl; }
+private:
+	int int_x;
+};
+
+class Mytest : public Test {
+public:
+	Mytest() : Test(110) {
+		/*Test(110); */           //  构造函数只能在初始化列表中被显示调用，不能在构造函数内部被显示调用.  否则Test对象的生命周期只在{}内
+	};
+};
