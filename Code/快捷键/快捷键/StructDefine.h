@@ -96,7 +96,7 @@ public:
 	~CconStruct();
 
 private:
-
+	AStruct sS;
 };
 
 CconStruct::CconStruct()

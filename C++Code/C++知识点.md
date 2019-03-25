@@ -13,7 +13,7 @@
 
 **示例：-（S=Struct   C=Class  Con=Conntain  Inher=Inherit）**
 
-![alt 构造函数](E:\18Git\Code\9_image\运行结果.png  "示例：s表示struct/c表示class")
+![alt 构造函数](..\Code\9_image\运行结果.png  "示例：s表示struct/c表示class")
 
 
 
@@ -42,6 +42,10 @@
 > 
 
 > 
+
+
+
+new 的位置可以堆可以栈，如何查看他的位置呢？ --- linux
 
 ### 内联函数的优缺点
 
