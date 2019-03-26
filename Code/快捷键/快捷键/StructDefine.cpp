@@ -4,14 +4,13 @@
 
 void StructDefine()
 {
-	Mytest cMyTest;
-	cMyTest.show();
+// 	Mytest cMyTest;
+// 	cMyTest.show();
 
 	//Single
 	cout << "\tSingle Start" << endl;
 	{
 		AStruct tAs;
-		cout << "\ttAs:"<< tAs.dwAstruct << endl;
 		Aclass cAc;
 	}
 	cout << "\tSingle End" << endl;
@@ -39,6 +38,28 @@ void StructDefine()
 		CInherClass  cInherC;
 	}
 	cout << "\tInherit End" << endl;
+
+	{
+		//初始化列表-之三：子类初始化父类的私有成员
+		class Test {
+		public:
+			Test() { cout << "Test void" << endl; }
+			Test(int x) { cout << "Test Int" << endl; int_x = x; }
+			void show() { cout << "int_x = " << int_x << endl; }
+		private:
+			int int_x;
+		};
+
+		class Mytest : public Test {
+		public:
+			Mytest() /*: Test(110)*/ {
+				Test(110);            //  构造函数只能在初始化列表中被显示调用，不能在构造函数内部被显示调用.  否则Test对象的生命周期只在{}内
+			};
+		};
+
+		Mytest myTest;
+		myTest.show();
+	}
 
 	return;
 }

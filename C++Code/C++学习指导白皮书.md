@@ -1,16 +1,18 @@
-Difference between pointer and reference?
++ Difference between pointer and reference?
 
-i++, ++i, which one is better?
++ i++, ++i, which one is better?
 
-Why use virtual destructor?
++ Why use virtual destructor?
 
-What is the signature of a copy constructor/ assignment operator?
++ What is the signature of a copy constructor/ assignment operator?
 
-How to specialize a class template?
++ How to specialize a class template?
++ What are the four types of casts in C++? Usage?
 
 What are the four types of casts in C++? Usage?
 
 etc
+
 
 
 准备：一些常用c语言基础：指针、数组、字符串数组、int、size_t、char、signed/unsigned、const
