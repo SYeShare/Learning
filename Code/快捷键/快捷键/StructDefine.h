@@ -30,10 +30,11 @@ public:
 //Contain
 struct SConStruct
 {
+	int c;
 	AStruct tA;
 	int  b;
 	/*Aclass cA;*/
-	SConStruct():b(2)
+	SConStruct():b(2),c(3)
 	{
 		cout<<b<<endl;
 	};

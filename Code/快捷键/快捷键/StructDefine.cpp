@@ -8,12 +8,12 @@ void StructDefine()
 // 	cMyTest.show();
 
 	//Single
-	cout << "\tSingle Start" << endl;
-	{
-		AStruct tAs;
-		Aclass cAc;
-	}
-	cout << "\tSingle End" << endl;
+// 	cout << "\tSingle Start" << endl;
+// 	{
+// 		AStruct tAs;
+// 		Aclass cAc;
+// 	}
+// 	cout << "\tSingle End" << endl;
 
 	//contain
 	cout << "\tContain Start" << endl;
@@ -39,6 +39,28 @@ void StructDefine()
 	}
 	cout << "\tInherit End" << endl;
 
+
+	{
+
+	}
+
+
+
+
+
+#if 0
+	{
+		class CConst {
+		public:
+			const int m_dwConst;
+			CConst():m_dwConst(10) {}
+		};
+
+
+	}
+
+
+
 	{
 		//初始化列表-之三：子类初始化父类的私有成员
 		class Test {
@@ -53,13 +75,16 @@ void StructDefine()
 		class Mytest : public Test {
 		public:
 			Mytest() /*: Test(110)*/ {
-				Test(110);            //  构造函数只能在初始化列表中被显示调用，不能在构造函数内部被显示调用.  否则Test对象的生命周期只在{}内
+				Test(110);            //  构造函数只能在初始化列表中被显示调用，
+									  //不能在构造函数内部被显示调用.  否则Test对象的生命周期只在{}内
 			};
 		};
 
 		Mytest myTest;
 		myTest.show();
 	}
+
+#endif
 
 	return;
 }
