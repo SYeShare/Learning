@@ -14,7 +14,7 @@ void StructDefine()
 // 		Aclass cAc;
 // 	}
 // 	cout << "\tSingle End" << endl;
-
+#if 0  //°üº¬ºÍ¼Ì³Ð
 	//contain
 	cout << "\tContain Start" << endl;
 	{
@@ -38,6 +38,8 @@ void StructDefine()
 		CInherClass  cInherC;
 	}
 	cout << "\tInherit End" << endl;
+
+#endif
 
 
 	{
