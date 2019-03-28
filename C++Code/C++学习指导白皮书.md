@@ -39,7 +39,21 @@ etc
 
 
 
+#### 书籍推荐
 
+c++入门:c++ primer(没有plus) 
+c++进阶:effective c++ more effective c++ 
+深度探索c++对象模型 STL源码剖析 effective STL c++的设计与演化 c++沉思录 c++编程思想 
+算法与数据结构:算法(第四版) 编程珠玑 算法导论 算法与数据结构(wesis) 
+网络编程:APUE UNP 
+操作系统:深入理解计算机系统(CSAPP，简直神书，值得不断看反复看) 现代操作系统 操作系统概念
+计算机网络: 自顶向下的方法 TCP/IP V1 计算机网络 HTTP权威指南
+数据库:入门推荐学习MySQL
+MySQL必知必会 高性能MySQL
+设计模式:Head First设计模式
+Redis:Redis设计与实现
+还有最好学习一门脚本语言，比如shell/python/perl 
+源码推荐:leveldb nginx muduo libevent redis
 
 ### 学习C++ Primer 的方法
 
