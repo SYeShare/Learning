@@ -43,7 +43,10 @@ void StructDefine()
 
 
 	{
-
+		//SConStruct sConS;
+		//SInherClass sInherC;
+		//CConClass cConC;
+		CInherStruct cInherS;
 	}
 
 

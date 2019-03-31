@@ -2,41 +2,48 @@
 #include "pch.h"
 
 //base»ù´¡DATA
-struct AStruct
-{
-	int dwAstruct;
-	int sa;
-
-	AStruct():sa(1)
-	{
-		cout << sa << endl;
-	}
-	~AStruct(){ cout << "~AStruct()" << endl; }
-
-};
-
 class  Aclass
 {
 private:
 	int dwAclass;
 public:
-	Aclass():dwAclass(44)
+	Aclass() :dwAclass(44)
 	{
-		cout<< dwAclass <<endl;
+		cout << "Aclass().dAwclass" << dwAclass << endl;
 	}
-	~Aclass(){ cout << "~Aclass()" << endl; }
+	~Aclass() { cout << "~Aclass()" << endl; }
+	int GetAC() { return dwAclass; }
 };
+
+struct AStruct:Aclass
+{
+	int sa;
+
+	AStruct():sa(1)
+	{
+		cout <<"AStruct():sa"<< sa << endl;
+	}
+	~AStruct(){ cout << "~AStruct()" << endl; }
+
+};
+
+
 
 //Contain
 struct SConStruct
 {
-	int c;
-	AStruct tA;
-	int  b;
-	/*Aclass cA;*/
-	SConStruct():b(2),c(3)
+	int A;
+	AStruct tB;
+	int  C;
+	Aclass cD;
+	int E;
+	SConStruct():A(2),C(3),E(4)
 	{
-		cout<<b<<endl;
+		cout<<"SConStruct().A:"<< A <<endl;
+		cout<<"SConStruct().tB:"<< tB.sa <<endl;
+		cout<<"SConStruct().C:"<< C <<endl;
+		cout<<"SConStruct().cD:"<< cD.GetAC() <<endl;
+		cout<<"SConStruct().E:"<< E <<endl;
 	};
 	~SConStruct(){ cout << "~SConStruct()" << endl; }
 };
@@ -51,8 +58,24 @@ struct SConClass
 
 class CConClass
 {
+private:
+	int A;
+	AStruct tB;
+	int  C;
+	Aclass cD;
+	int E;
 public:
-	CConClass(){ cout << "CConClass()" << endl; }
+	CConClass() : C(3), E(4),A(2)
+	{
+		cout << "CConClass().A:" << A << endl;
+		cout << "CConClass().tB:" << tB.sa << endl;
+		cout << "CConClass().C:" << C << endl;
+		cout << "CConClass().cD:" << cD.GetAC() << endl;
+		cout << "CConClass().E:" << E << endl;
+	};
+
+
+	//CConClass(){ cout << "CConClass()" << endl; }
 	~CConClass(){ cout << "~CConClass()" << endl; }
 
 private:
@@ -80,15 +103,46 @@ struct SInherStruct:AStruct
 
 struct SInherClass : Aclass
 {
-	SInherClass(){ cout << "SInherClass()" << endl; }
+	int A;
+	AStruct tB;
+	int  C;
+	SInherClass() :C(2), A(3)
+	{
+		cout << "SInherClass().A:" << A << endl;
+		cout << "SInherClass().tB:" << tB.sa << endl;
+		cout << "SInherClass().C:" << C << endl;
+		cout << "SInherClass().AC:" << GetAC() << endl;
+	};
+
+
+
 	~SInherClass(){ cout << "~SInherClass()" << endl; }
 };
 
 
 class CInherStruct : AStruct
 {
+private:
+	int a;
+
+private:
+	int A;
+	AStruct tB;
+	int  C;
+	Aclass cD;
+	int E;
 public:
-	CInherStruct(){ cout << "CInherStruct()" << endl; }
+	CInherStruct() : C(3), E(4), A(2)
+	{
+		cout << "CConClass().A:" << A << endl;
+		cout << "CConClass().tB:" << tB.sa << endl;
+		cout << "CConClass().C:" << C << endl;
+		cout << "CConClass().cD:" << cD.GetAC() << endl;
+		cout << "CConClass().E:" << E << endl;
+	};
+
+public:
+	//CInherStruct(){ cout << "CInherStruct()" << endl; }
 	~CInherStruct(){ cout << "~CInherStruct()" << endl; }
 };
 

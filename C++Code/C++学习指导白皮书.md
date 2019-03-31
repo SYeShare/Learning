@@ -1,25 +1,8 @@
-+ Difference between pointer and reference?
-
-+ i++, ++i, which one is better?
-
-+ Why use virtual destructor?
-
-+ What is the signature of a copy constructor/ assignment operator?
-
-+ How to specialize a class template?
-+ What are the four types of casts in C++? Usage?
-
-What are the four types of casts in C++? Usage?
-
-etc
-
-
-
 准备：一些常用c语言基础：指针、数组、字符串数组、int、size_t、char、signed/unsigned、const
 
-第一层，基本常用结构：std::string、std::map、std::vector、ios
+第一层，基本常用结构：**std::string、std::map、std::vector、0401-？**ios  
 
-第二层，自定义对象：struct、class、继承、重载、多态
+第二层，自定义对象：**struct、class、0331**       继承、重载、多态
 
 第三层，进一步抽象对象：虚继承
 
@@ -36,6 +19,19 @@ etc
 第九层，静态优化：constexpr、templete
 
 第十层，渐入佳境：随意发挥
+
+
+
++ Difference between pointer and reference?
++ i++, ++i, which one is better?
++ Why use virtual destructor?
++ What is the signature of a copy constructor/ assignment operator?
++ How to specialize a class template?
++ What are the four types of casts in C++? Usage?
+
+What are the four types of casts in C++? Usage?
+
+etc
 
 
 
