@@ -118,28 +118,4 @@
 
 
 
-***软件：Typora  &&  TranslucentTB***
-
-
-
-****
-
-### sscanf 切割字符串，可用正则表达式
-
-> 规则：  以空格为默认分隔符
->
-> ​		%*\[^, ]   跳过, 这些匹配项
-> ​		%\[^,]		匹配逗号
-
-***
-
-#### c++  待了解的用法
-树📕 深度遍历 / 广度遍历 
-智能指针 *p
-
-BOOL32 CMtMgrInst::Poweron( const CMessage * pcMsg )
-{
-	CMgrCBObj *pObj = new CMediaPortCBDistrib<CMtMgrInst>(this, &CMtMgrInst::CBEntry, GetAppID(), GetInsID());
-}
-
-##### 定时呼叫默认是不强拆  @强拆
+##### 
