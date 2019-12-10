@@ -1,4 +1,28 @@
-***进度安排***
+****
+
+****
+
+new 变量的生命周期  同
+
+
+
+
+
+****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **构造析构/结构体&类** 	***0331***	[整理](<https://www.cnblogs.com/susharelight/p/10604711.html>)
 
@@ -35,4 +59,4 @@ BOOL32 CMtMgrInst::Poweron( const CMessage * pcMsg )
 	CMgrCBObj *pObj = new CMediaPortCBDistrib<CMtMgrInst>(this, &CMtMgrInst::CBEntry, GetAppID(), GetInsID());
 }
 
-##### 定时呼叫默认是不强拆  @强拆
+##### 
