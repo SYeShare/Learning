@@ -14,3 +14,13 @@ C++Code/压缩编码demo/ipch/
 *.db
 
 *.swp
+C++Code/压缩编码demo/压缩编码demo/Debug/
+C++Code/C++PriPlus/C++PriPlus/x64/Debug/
+*.exe
+C++Code/TimeTick/TimeTick/.vs/
+C++Code/TimeTick/TimeTick/Debug/
+*.user
+C++Code/TimeTick/TimeTick/TimeTick/Debug/
+C++Code/C++PriPlus/x64/Debug/
+C++Code/压缩编码demo/Debug/
+*.sln

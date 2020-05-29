@@ -2,35 +2,29 @@
 //
 
 #include "stdafx.h"
-
+#include <iostream>
 #include <map>
-
+#include <string>
 using namespace std;
-struct A
-{
-	int i;
-	int j;
-};
-
-struct B
-{
-	int i;
-	bool b;
-	int j;
-};
 
 int main()
 {
 	//  [8/21/2019 suzhibin]
 	cout << "hello https://tool.lu/" << endl;
 
-	A a;
-	a.i = 1;
-	a.j = 2;
+	string str1 = "I";
+	string str2 = "love";
+	string str3 = str1 + "eat" + "apple";
+	cout << str3 << endl;
 
-	B *b = (B*)a;
 
-	cout << "i" << b->i << "j" << b->j << endl;
+// 
+// 	A a;
+// 	a.i = 1;
+// 	a.j = 2;
+// 
+// 	B *b = (B*)a;
+// 	cout << "i" << b->i << "j" << b->j << endl;
 
 
 

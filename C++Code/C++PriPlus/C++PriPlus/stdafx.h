@@ -18,6 +18,25 @@ const double* f1(const double ar[], int n);
 const double * f2(const double[], int);
 const double *f3(const double*, int);
 
+struct A
+{
+	int i;
+	int j;
+};
+
+struct B
+{
+	int i;
+	bool b;
+	int j;
+};
+// struct A
+// {
+// 	int i;
+// 	int *p;
+// public:
+// 	A() :p(0) { cout << "A:A()" << endl; }
+// };
 
 
 // TODO:  在此处引用程序需要的其他头文件

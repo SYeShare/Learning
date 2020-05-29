@@ -4,15 +4,8 @@
 
 #include "stdafx.h"
 
-struct A 
-{
-	int i;
-	int *p;
-public:
-	A() :p(0) { cout << "A:A()" << endl; }
-};
 
-
+#if 0
 template <typename AnyType>
 void Swap(AnyType &a, AnyType &b)
 {
@@ -30,5 +23,6 @@ void Swap(T &a, T &b)
 	a = b;
 	b = a;
 }
+#endif
 // TODO: 在 STDAFX.H 中引用任何所需的附加头文件，
 //而不是在此文件中引用
