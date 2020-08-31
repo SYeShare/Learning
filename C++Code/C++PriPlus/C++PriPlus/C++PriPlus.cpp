@@ -7,8 +7,39 @@
 #include <string>
 using namespace std;
 
+testtmp tst[10];
+
 int main()
 {
+    //最长无重复子串
+
+
+    //初始化
+    char tmp = 25;
+    cout << tmp << endl;
+
+    for (int i = 0;i<10;i++)
+    {
+        cout << tst[i].i << "----";
+        cout << tst[i].j << endl;
+    }
+    cout << "size:" << sizeof(tst) << endl;
+    memset(tst, 0, sizeof(tst));
+    for (int i = 0; i < 10; i++)
+    {
+        cout << tst[i].i << "----" << tst[i].j << endl;
+    }
+
+
+
+    /*
+    kdv_netaddr netaddr;
+    str2netaddr(KDV_NET_ANYADDR, 0, &netaddr);
+
+    int bRet = strncmp(netaddr2str(&netaddr), ":", strlen(KDV_NET_ANYADDR));
+    cout << bRet << endl;
+    */
+    /*
 	//  [8/21/2019 suzhibin]
 	cout << "hello https://tool.lu/" << endl;
 
@@ -16,7 +47,7 @@ int main()
 	string str2 = "love";
 	string str3 = str1 + "eat" + "apple";
 	cout << str3 << endl;
-
+    */
 
 // 
 // 	A a;
