@@ -11,24 +11,28 @@ testtmp tst[10];
 
 int main()
 {
+    cout << strlen(" ") << endl;
+    
+    cout << strncmp(" ", "", 4) << endl;
+
     //最长无重复子串
 
 
     //初始化
-    char tmp = 25;
-    cout << tmp << endl;
-
-    for (int i = 0;i<10;i++)
-    {
-        cout << tst[i].i << "----";
-        cout << tst[i].j << endl;
-    }
-    cout << "size:" << sizeof(tst) << endl;
-    memset(tst, 0, sizeof(tst));
-    for (int i = 0; i < 10; i++)
-    {
-        cout << tst[i].i << "----" << tst[i].j << endl;
-    }
+//     char tmp = 25;
+//     cout << tmp << endl;
+// 
+//     for (int i = 0;i<10;i++)
+//     {
+//         cout << tst[i].i << "----";
+//         cout << tst[i].j << endl;
+//     }
+//     cout << "size:" << sizeof(tst) << endl;
+//     memset(tst, 0, sizeof(tst));
+//     for (int i = 0; i < 10; i++)
+//     {
+//         cout << tst[i].i << "----" << tst[i].j << endl;
+//     }
 
 
 
@@ -151,6 +155,10 @@ void a1(int arr[], int len, int vlue);
 void a2(int *p1, int *p2, int value);
 int fn(int n)
 {
+    if (n = 1)
+    {
+        return 1;
+    }
 	return n * fn(n - 1);
 }
 const double *f1(const double *ar, int n)

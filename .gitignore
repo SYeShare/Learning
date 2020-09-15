@@ -24,3 +24,5 @@ C++Code/TimeTick/TimeTick/TimeTick/Debug/
 C++Code/C++PriPlus/x64/Debug/
 C++Code/压缩编码demo/Debug/
 *.sln
+*.vcxproj
+*.filters

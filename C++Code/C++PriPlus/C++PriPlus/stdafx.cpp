@@ -7,8 +7,8 @@
 //
 class TreeNode{
     int val;
-    TreeNode cleft;
-}
+    TreeNode *cleft;
+};
 
 
 
