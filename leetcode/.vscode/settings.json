@@ -2,6 +2,7 @@
     "files.associations": {
         "queue": "cpp",
         "unordered_set": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "xstring": "cpp"
     }
 }
