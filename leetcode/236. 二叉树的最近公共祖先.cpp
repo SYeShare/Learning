@@ -23,15 +23,14 @@ public:
         {
             return root;
         }
-
         TreeNode *left = lowestCommonAncestor(root->left, p, q);
         TreeNode *right = lowestCommonAncestor(root->right, p, q);
 
-        if (left == nullptr)
+        if (left)
         {
             return right;
         }
-        if (right == nullptr)
+        if (right)
         {
             return left;
         }

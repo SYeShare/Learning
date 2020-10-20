@@ -5,7 +5,7 @@ class Solution
 public:
     Node *connect(Node *root)
     {
-#if 1 //层次遍历  使用queue
+#if 1 //灞傛閬嶅巻BFS -- 闃熷垪
         if (root == nullptr)
         {
             return root;
@@ -37,7 +37,7 @@ public:
 
 #endif
 
-#if 0 //递归
+#if 0 //閫掑綊
         if (root == nullptr || root->left == nullptr)
         {
             return root;
