@@ -12,6 +12,61 @@
  * };
  */
 #include "origin.hpp"
+
+class Solution_Sec
+{
+public:
+    void reorderList(ListNode *head)
+    {
+        //check
+        if (head == nullptr || head->next == nullptr)
+            return;
+
+        ListNode *slow = head, *fast = head;
+
+        //find mid node;
+        ListNode *midnode = findmidnode(slow, fast);
+        //reverse right part lsit;
+        ListNode *revernode = reversenode(midnode);
+
+        ListNode *p = head;
+        while (revernode)
+        {
+            ListNode *headnext = p->next;
+            ListNode *revernext = revernode->next;
+            p->next = revernode;
+            revernode->next = headnext;
+            p = headnext;
+            revernode = revernext;
+        }
+    }
+
+    ListNode *findmidnode(ListNode *slow, ListNode *fast)
+    {
+        while (fast != nullptr && fast->next != nullptr && fast->next->next != nullptr)
+        {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        ListNode *midnode = slow->next;
+        slow->next = nullptr;
+        return midnode;
+    }
+    ListNode *reversenode(ListNode *root)
+    {
+        ListNode *pre = nullptr;
+        ListNode *cur = root;
+        while (cur)
+        {
+            ListNode *tmp = cur->next;
+            cur->next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+        return pre;
+    }
+};
+
 class Solution
 {
 public:
