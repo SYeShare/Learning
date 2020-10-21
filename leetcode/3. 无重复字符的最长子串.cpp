@@ -1,3 +1,8 @@
+//给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+//输入: "abcabcbb"
+// 输出: 3
+// 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+
 #include "origin.hpp"
 
 class Solution
@@ -5,24 +10,22 @@ class Solution
 public:
     int lengthOfLongestSubstring(string s)
     {
-        if (s.size() == 0)
-            return 0;
+        if (s.length() < 1)
+            return s.length();
 
-        unordered_set<char> lookup;
-
-        int maxstr = 0;
+        int maxsublen = 0;
+        unordered_set<int> set;
         int left = 0;
-
-        for (int i = 0; i < s.size(); i++)
+        for (int i = 0; i < s.length(); i++)
         {
-            while (lookup.find(s[i]) != lookup.end())
+            while (set.find(s[i]) != set.end())
             {
-                lookup.erase(s[left]);
+                set.erase(s[left]);
                 left++;
             }
-            maxstr = max(maxstr, i - left + 1);
-            lookup.insert(s[i]);
+            set.insert(s[i]);
+            maxsublen = max(maxsublen, i - left + 1);
         }
-        return maxstr;
+        return maxsublen;
     }
 };
