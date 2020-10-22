@@ -12,6 +12,61 @@
  * };
  */
 #include "origin.hpp"
+//2020-10-22 22:36:15
+class Solution_third
+{
+public:
+    void recorderList(ListNode *head)
+    {
+        //check
+        if (head == nullptr)
+            return;
+        ListNode *slow = head, *fast = head;
+
+        //find mid
+        ListNode *midnode = findmidnode(slow, fast); //error : slow fast 需要赋值
+        //reverse end
+        ListNode *behindnode = reversenode(midnode);
+
+        //link
+        ListNode *link = head;
+        while (behindnode)
+        {
+            ListNode *curr = link->next;
+            ListNode *behind = behindnode->next;
+            link->next = behindnode;
+            behindnode->next = curr;
+            link = curr;
+            behindnode = behind;
+        }
+    }
+
+    ListNode *findmidnode(ListNode *slow, ListNode *fast)
+    {
+        while (fast && fast->next && fast->next->next)
+        {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        ListNode *endhead = slow->next;
+        slow->next = nullptr; //reset
+        return endhead;
+    }
+
+    ListNode *reversenode(ListNode *head)
+    {
+        ListNode *prev = nullptr;
+        ListNode *curr = head;
+        while (curr)
+        {
+            ListNode *tmp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = tmp;
+        }
+        return prev;
+    }
+};
 
 class Solution_Sec
 {

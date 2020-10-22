@@ -6,6 +6,32 @@
 class Solution
 {
 public:
+    //2020-10-22 23:37:11
+    int jump_sec(vector<int> &nums)
+    {
+        //check
+        if (nums.size() < 2)
+            return 0;
+
+        int start = 0;
+        int end = 1;
+        int maxpos = 0;
+        int count = 0;
+
+        while (end < nums.size())
+        {
+            while (start < end)
+            {
+                maxpos = max(maxpos, nums[start] + start);
+                start++;
+            }
+            start = end;
+            end = maxpos + 1;
+            count++;
+        }
+        return count;
+    }
+
     int jump(vector<int> &nums)
     {
         int cout = 0;

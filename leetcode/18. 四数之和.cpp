@@ -13,6 +13,55 @@
 class Solution
 {
 public:
+    //2020-10-23 00:05:39
+    vector<vector<int>> fourSum_sec(vector<int> &nums, int target)
+    {
+        vector<vector<int>> res;
+        int a, b, c, d, size = nums.size();
+
+        //error：缺少排序
+
+        for (a = 0; a < size - 4; a++) //error:应该是 <=
+        {
+            if (a > 1 && nums[a - 1] > nums[a])
+                continue;
+
+            for (b = a + 1; b < size - 3; b++)
+            {
+                if (b > a + 1 && nums[b - 1] == nums[b])
+                {
+                    continue;
+                }
+
+                c = b + 1;
+                d = size - 1;
+
+                while (c < d)
+                {
+                    if (nums[a] + nums[b] + nums[c] + nums[d] > target)
+                    {
+                        d--;
+                    }
+                    else if (nums[a] + nums[b] + nums[c] + nums[d] < target)
+                    {
+                        c++;
+                    }
+                    else
+                    {
+                        res.push_back({nums[a], nums[b], nums[c], nums[d]});
+                        while (c < d && nums[c + 1] == nums[c])
+                            c++;
+                        while (c < d && nums[d - 1] == nums[d])
+                            d--;
+                    }
+                    c++;
+                    d--;
+                }
+            }
+        }
+        return res;
+    }
+
     vector<vector<int>> fourSum(vector<int> &nums, int target)
     {
         vector<vector<int>> res;
