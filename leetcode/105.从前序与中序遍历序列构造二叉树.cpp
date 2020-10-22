@@ -1,4 +1,4 @@
-/**105. ´ÓÇ°ÐòÓëÖÐÐò±éÀúÐòÁÐ¹¹Ôì¶þ²æÊ÷
+/**105. ä»Žå‰åºä¸Žä¸­åºéåŽ†åºåˆ—æž„é€ äºŒå‰æ ‘
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -8,14 +8,6 @@
  * };
  */
 #include "origin.hpp"
-
-struct TreeNode
-{
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
 
 class Solution
 {
@@ -34,7 +26,7 @@ public:
 
         TreeNode *node = new TreeNode(root);
         node->left = buildTree(ps + 1, ps + pos - is, is, pos - 1);
-        node->right = buildTree(ps + pos - is + 1, pe, pos + 1, ie); //ps+pos-is+1 ²»Îª+2ÊÇÒòÎª´ËÈÝÆ÷ÒÑ¾­ÉÙÁËÒ»¸öÊý£¬Ö»ÊÇÆðµ½Ãª¶¨Î»ÖÃµÄ×÷ÓÃ£¬²»×öÆ«ÒÆ
+        node->right = buildTree(ps + pos - is + 1, pe, pos + 1, ie); //ps+pos-is+1 ï¿½ï¿½Îª+2ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ãªï¿½ï¿½Î»ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Æ«ï¿½ï¿½
 
         return node;
     }
@@ -52,7 +44,7 @@ public:
             tmp++;
         }
         post = preorder;
-        TreeNode *node = buildTree(0, preorder.size() - 1, 0, inorder.size() - 1); //size´óÐ¡ÐèÒªÈ·ÈÏ£¬ÐèÒª¼õ1´¦Àí
+        TreeNode *node = buildTree(0, preorder.size() - 1, 0, inorder.size() - 1); //sizeï¿½ï¿½Ð¡ï¿½ï¿½ÒªÈ·ï¿½Ï£ï¿½ï¿½ï¿½Òªï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½
 
         return node;
     }

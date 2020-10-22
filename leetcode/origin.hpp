@@ -1,3 +1,5 @@
+#ifndef _ORIGIN_HPP
+#define _ORIGIN_HPP
 
 #include <iostream>
 #include <vector>
@@ -5,9 +7,16 @@
 #include <unordered_set>
 #include <stack>
 #include <queue>
-#include <algorithm> //�����ַ��������������� �����򣨷�ת��
+#include <algorithm> //用于字符串、容器、数组 的逆序（反转）
+#include <string.h>
 
 using namespace std;
+
+//test
+namespace UserTest
+{
+    void usertest();
+};
 
 //Definition for a binary tree node.
 struct TreeNode
@@ -43,3 +52,5 @@ public:
     Node(int _val, Node *_left, Node *_right, Node *_next)
         : val(_val), left(_left), right(_right), next(_next) {}
 };
+
+#endif
