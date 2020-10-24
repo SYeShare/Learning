@@ -6,8 +6,17 @@
 class Solution
 {
 public:
+    //2020-10-24 13:31:46
     bool canjump_sec(vector<int> &nums)
     {
+        int maxpos = 0;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (i > maxpos)
+                return false;
+            maxpos = max(maxpos, nums[i] + i);
+        }
+        return true;
     }
 
     bool canJump(vector<int> &nums)
