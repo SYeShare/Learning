@@ -11,6 +11,9 @@
 #include <string.h>
 #include <unordered_map>
 
+#include <stdio.h>
+#include <arpa/inet.h>
+
 using namespace std;
 
 //test
