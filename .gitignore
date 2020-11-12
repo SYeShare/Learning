@@ -26,3 +26,5 @@ C++Code/压缩编码demo/Debug/
 *.sln
 *.vcxproj
 *.filters
+One_Note/个人/OneNote_RecycleBin/
+*.onetoc2
