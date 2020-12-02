@@ -4,9 +4,9 @@
 int main()
 {
     //2020-11-02 15:46:04
-    char *p = nullptr;
+    char *p = 0;
     printf("%d", p);
-    printf("%d," * p);
+    //printf("%d" * p);
 
     //test
     //char *p = "ABCD";
