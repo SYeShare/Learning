@@ -29,12 +29,18 @@ int main()
         j["mt"] = 3;
         j["mtno"] = "su";
 
+        j["sex"] = std::to_string(3).c_str();
+
+        string strsex = j.value("sex", "0");
+        cout << strsex << endl;
+
         //json子串后加结构体等数据会导致序列化失败
         char jsonbuff[200] = {0};
-        string str = "{\"ip\": \"172.16.179.144\", \"type\" : \"MCU_CM_SIMCONFINFO_NTF\"}";
+        string str = "{\"ip\": \"172.16.179.144\", \"type\" : \"MCU_CM_SIMCONFINFO_NTF\"}est";
         strncpy(jsonbuff, str.c_str(), str.length());
         //json tmp = json::parse(str.c_str());
-        cout << json::parse(str.c_str()).dump(4) << endl;
+        cout << str.length() << endl;
+        cout << json::parse(str.c_str(), str.c_str() + 59).dump(4) << endl;
         MyTp my;
         memcpy(jsonbuff + str.length(), (char *)&my, sizeof(MyTp));
         //cout << json::parse(jsonbuff).dump(4) << endl;
@@ -51,12 +57,17 @@ int main()
         b["a"].push_back(c);
         cout << b.dump(4) << endl;
 
+        json e;
+        e["ip"] = nullptr;
+
+        cout << e.dump(4) << endl;
+
         //取值
         cout << b["a"].size() << endl;
 
         for (json::iterator j = b["a"].begin(); j != b["a"].end(); j++)
         {
-            // cout << j["name"].get<int>() << endl;  error
+            //cout << j.dump() << endl;
         }
         //json构造数组数据
         //        json jarray;
